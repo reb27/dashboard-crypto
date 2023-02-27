@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Theme, GlobalStyles } from './themes';
+import { Routes } from './routes';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <span>Hello World</span>
-    </div>
+    <Theme>
+      <GlobalStyles />
+      <Routes />
+    </Theme>
   );
-}
-
-export default App;
+};
