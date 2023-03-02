@@ -8,9 +8,6 @@ fontSizes.displayExtraLarge = fontSizes[3];
 
 const background = '#E5E5E5';
 const text = '#000000';
-const text_secondary = '#A7B1C2';
-const positive_value = '#16C784';
-const negative_value = '#EA3943';
 
 const theme = {
   fontSizes,
@@ -21,9 +18,6 @@ const theme = {
   colors: {
     background,
     text,
-    text_secondary,
-    positive_value,
-    negative_value
   },
 };
 
