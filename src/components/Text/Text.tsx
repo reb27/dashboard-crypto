@@ -12,10 +12,14 @@ export const Text = styled.div<TextProps>`
         title_black_font: {
             fontSize: '28px',         
             color: '#000',
+            marginBottom: '15px',
+            fontWeight: 'bold',
         },
         normal_black_font: {
             fontSize: '16px',         
             color: '#000',
+            marginBottom: '15px',
+            marginTop: '15px',
         },
         normal_grey_font: {
             fontSize: '16px',         

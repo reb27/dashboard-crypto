@@ -5,11 +5,17 @@ import styled from 'styled-components';
 type IconProps = {
   variant: string;
   imageLink?: string;
+  width?: string;
+  height?: string;
 };
 
-const StyledIcon = styled.img`
-  width: 22px;
-  height: 22px;
+
+
+export const Icon: React.FC<IconProps> = ({ variant, imageLink, width, height }) => {
+
+  const StyledIcon = styled.img`
+  width: ${width || '22px'};
+  height: ${height || '22px'};
   &.notificacao {
     position: absolute;
     top: -12px;
@@ -20,7 +26,6 @@ const StyledIcon = styled.img`
   }
 `;
 
-export const Icon: React.FC<IconProps> = ({ variant, imageLink }) => {
   const [iconSrc, setIconSrc] = useState();
 
   useEffect(() => {

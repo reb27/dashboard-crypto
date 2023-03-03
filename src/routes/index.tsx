@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import { Home } from '../pages';
+import { Home } from '../pages/Home';
+import { Page } from '../pages/Page';
 
 export const Routes = () => {
   return (
@@ -9,8 +10,8 @@ export const Routes = () => {
         <Route path="/">
           <Home />
         </Route>
-        <Route path="*">
-          <Redirect to="/" />
+        <Route path="/oi">
+          <Page/>
         </Route>
       </Switch>
     </BrowserRouter>

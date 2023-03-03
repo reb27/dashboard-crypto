@@ -16,7 +16,7 @@ import {
   variant
 } from 'styled-system';
 
-type WrapperProps = LayoutProps &
+type ContainerProps = LayoutProps &
   SpaceProps &
   ColorProps &
   BorderRadiusProps &
@@ -25,7 +25,7 @@ type WrapperProps = LayoutProps &
     variant?: string;
   };
 
-export const Wrapper = styled.div<WrapperProps>`
+export const Container = styled.div<ContainerProps>`
     display: flex;
     ${variant({
     variants: {
@@ -47,6 +47,6 @@ export const Wrapper = styled.div<WrapperProps>`
   ${border}
 `;
 
-Wrapper.defaultProps = {
+Container.defaultProps = {
   variant: 'default',
 };

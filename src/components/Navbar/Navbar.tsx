@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Icon } from '../Icon/Icon';
 import { Logo } from '../Logo';
 import { Button } from '../Button';
 import { Input } from '../Input';
+import { getCoinById } from "../../hooks";
+import { debounce } from 'lodash';
 
 interface NavItemProps {
   item: string;
@@ -90,10 +92,22 @@ const NavbarButton = styled(Button).attrs({ as: 'div' })`
 export const Navbar: React.FC = () => {
   const [selected, setSelected] = useState('');
 
+
   const handleItemClick = (item: string) => {
     setSelected(item);
   };
 
+  // const callCoinGeckoAPI = (coinId:string) => {
+  //   fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`)
+  //     .then(response => response.json())
+  //     .then(data => console.log(data))
+  //     .catch(error => console.error(error));
+  // };
+  
+  // const handleInputChange = (newValue: string) => {
+  //   callCoinGeckoAPI(newValue);
+  //   console.log("entrei aqui")
+  // };
   return (
     <NavWrapper>
       <Logo />
@@ -112,7 +126,7 @@ export const Navbar: React.FC = () => {
           Log in
         </NavbarButton>
         <NavbarButton variant="primary">Sign up</NavbarButton>
-        <Input icon="search" placeholder="Buscar" />
+        <Input  icon="search" placeholder="Buscar" />
       </NavSearchWrapper>
 
     </NavWrapper>
